@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct WheaterAppApp: App {
+    @StateObject var viewModel:WheaterViewModel = WheaterViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
+                .environmentObject(viewModel)
+                
+           
         }
     }
 }

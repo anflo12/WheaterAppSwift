@@ -16,6 +16,8 @@
 		E83AB2DA27852E1F006D7556 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83AB2D927852E1F006D7556 /* SearchTextField.swift */; };
 		E8543132276A5F27001E44A5 /* CustomsColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8543131276A5F27001E44A5 /* CustomsColors.swift */; };
 		E8543136276A73ED001E44A5 /* SearchModalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8543135276A73ED001E44A5 /* SearchModalPage.swift */; };
+		E85598412795F95A005D0256 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85598402795F95A005D0256 /* LocationViewModel.swift */; };
+		E881D213279B4BBC00D61333 /* WheaterDaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881D212279B4BBC00D61333 /* WheaterDaysModel.swift */; };
 		E89EA7242787633A008FAE78 /* WheaterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89EA7232787633A008FAE78 /* WheaterInfoView.swift */; };
 		E8A14FE4277B9C4700C42A95 /* WheaterModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A14FE3277B9C4700C42A95 /* WheaterModelResponse.swift */; };
 		E8A14FE6277B9CBE00C42A95 /* WheaterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A14FE5277B9CBE00C42A95 /* WheaterViewModel.swift */; };
@@ -36,6 +38,8 @@
 		E83AB2D927852E1F006D7556 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		E8543131276A5F27001E44A5 /* CustomsColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomsColors.swift; sourceTree = "<group>"; };
 		E8543135276A73ED001E44A5 /* SearchModalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModalPage.swift; sourceTree = "<group>"; };
+		E85598402795F95A005D0256 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		E881D212279B4BBC00D61333 /* WheaterDaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterDaysModel.swift; sourceTree = "<group>"; };
 		E89EA7232787633A008FAE78 /* WheaterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInfoView.swift; sourceTree = "<group>"; };
 		E8A14FE3277B9C4700C42A95 /* WheaterModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterModelResponse.swift; sourceTree = "<group>"; };
 		E8A14FE5277B9CBE00C42A95 /* WheaterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				E8A14FE3277B9C4700C42A95 /* WheaterModelResponse.swift */,
 				E8A14FE7277BB5B600C42A95 /* WheaterCityModel.swift */,
 				E8A14FE9277BB97500C42A95 /* WeatherDataMapper.swift */,
+				E881D212279B4BBC00D61333 /* WheaterDaysModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			children = (
 				E8A14FE5277B9CBE00C42A95 /* WheaterViewModel.swift */,
 				E83AB2D72785294A006D7556 /* SearchWheaterViewModel.swift */,
+				E85598402795F95A005D0256 /* LocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				E8092619276A577700198063 /* WheaterInfo.swift in Sources */,
 				E89EA7242787633A008FAE78 /* WheaterInfoView.swift in Sources */,
 				E8E2F2D4278E14A10004FF25 /* UserDefaultHelper.swift in Sources */,
+				E881D213279B4BBC00D61333 /* WheaterDaysModel.swift in Sources */,
 				E8A14FEA277BB97500C42A95 /* WeatherDataMapper.swift in Sources */,
 				E8092617276A571A00198063 /* WheaterItemList.swift in Sources */,
 				E8543136276A73ED001E44A5 /* SearchModalPage.swift in Sources */,
@@ -242,6 +249,7 @@
 				E83AB2D82785294A006D7556 /* SearchWheaterViewModel.swift in Sources */,
 				E8543132276A5F27001E44A5 /* CustomsColors.swift in Sources */,
 				E8DD4EE1276B715B005294BE /* HomePage.swift in Sources */,
+				E85598412795F95A005D0256 /* LocationViewModel.swift in Sources */,
 				E83AB2DA27852E1F006D7556 /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +384,8 @@
 				DEVELOPMENT_TEAM = V63946B23G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Se necesita la localizacion para obtener el clima de tu ubicacion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -405,6 +415,8 @@
 				DEVELOPMENT_TEAM = V63946B23G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Se necesita la localizacion para obtener el clima de tu ubicacion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

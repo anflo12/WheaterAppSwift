@@ -18,7 +18,7 @@ final class SearchWheaterViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: url!) { data, response, error in
             if let _ = error {
-                print("error",error)
+                print("error",error?.localizedDescription ?? "")
             }
          
             if let  responseHttp = response as? HTTPURLResponse,

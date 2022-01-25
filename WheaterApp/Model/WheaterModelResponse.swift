@@ -1,5 +1,5 @@
 struct WheaterModel: Codable {
-   
+    let coord:Coord
     let weather: [Weather]
     let base: String
     let main: Main
@@ -10,7 +10,11 @@ struct WheaterModel: Codable {
     let cod: Int
 }
 
+// MARK: - COORD
 
+struct Coord:Codable {
+    let lon, lat:Double
+}
 // MARK: - Main
 struct Main: Codable {
     let temp, feelsLike, tempMin, tempMax: Double
@@ -27,8 +31,9 @@ struct Main: Codable {
 
 // MARK: - Sys
 struct Sys: Codable {
-    let type, id: Int
-    let country: String
+    let typer:Int?
+    let id: Int?
+    let country: String?
     let sunrise, sunset: Int
 }
 

@@ -13,7 +13,7 @@ struct WheaterDataMapper {
             return .empty
         }
         
-        return WheaterCityModel(main: weather.main, description: weather.weatherDescription , icon: URL(string: "https://openweathermap.org/img/wn/\(weather.icon)@2x.png"),temp: "\(Int(dataModel.main.temp))°", name: dataModel.name,country: dataModel.sys.country)
+        return WheaterCityModel(main: weather.main, description: weather.weatherDescription , icon: URL(string: "https://openweathermap.org/img/wn/\(weather.icon)@2x.png"),temp: "\(Int(dataModel.main.temp))°", name: dataModel.name,country: dataModel.sys.country ?? "" , lon: dataModel.coord.lon, lat: dataModel.coord.lat)
     }
 }
     

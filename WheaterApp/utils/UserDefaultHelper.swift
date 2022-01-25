@@ -9,21 +9,45 @@ import Foundation
 
 class UserDefaultHelper {
     private let wheaterModelMaper:WheaterDataMapper = WheaterDataMapper()
+    var citiesCoordsData:[[String:String]] = []
 
-    func encoderData (data:Any, key:String){
-        UserDefaults.standard.set(data, forKey: key)
+    func encoderData (data:WheaterCityModel){
+        if UserDefaults.standard.array(forKey: "cities") != nil{
+            
+        
+            citiesCoordsData.append(["\(data.name)": "\(data.lon),\(data.lat)"])
+
+            
+        }else{
+            citiesCoordsData.append(["\(data.name)": "\(data.lon),\(data.lat)"])
+        }
+    print("encoded",citiesCoordsData)
+        UserDefaults.standard.set(citiesCoordsData, forKey: "cities")
     }
     
-    func decoderData (key:String) ->  WheaterCityModel {
-        var tempWheater:WheaterCityModel? = .empty
+    
+    func decoderData () ->  [[String:String]] {
+        var citiesCoords:[[String:String]] = []
+
         if let citiesData = UserDefaults.standard.array(forKey: "cities"){
-           let  jsonData = try! JSONSerialization.data(withJSONObject: citiesData)
-
-            let wheaterDataModel = try!  JSONDecoder().decode(WheaterModel.self, from: jsonData)
-            //self.wheater.append(contentsOf: [ citiesData as [WheaterCityModel] ,wheaterData])
-             tempWheater =  self.wheaterModelMaper.mapDataToModel(dataModel: wheaterDataModel )
+            
+            for citiesDatum in citiesData {
+                citiesCoords.append(citiesDatum as! [String : String])
+                
+            }
+            
+            
         }
-        return tempWheater!
-
+        // print(citiesCoords)
+        return citiesCoords
+    }
+    
+    func mapCoordsCity(coords:[String:String]) -> [Substring] {
+        var coordsArray:[Substring] = []
+        coords.forEach { (key: String, value: String) in
+            let splitCoords = value.split(separator: ",")
+            coordsArray = splitCoords
+        }
+        return coordsArray
     }
 }
